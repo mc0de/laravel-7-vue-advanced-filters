@@ -11,5 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
+ mix.options({
+     hmrOptions: {
+         host: 'fresh.test',
+         port: 8080,
+     }
+ });
+
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+if (mix.inProduction()) {
+    mix.version();
+}
