@@ -39,7 +39,6 @@ class CustomQueryBuilder
             // normal column
             $this->{Str::camel($filter['operator'])}($filter, $query);
         }
-
     }
 
     public function equalTo($filter, $query)
